@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="./home.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navigation">
+        <h3 onclick="optionDefaul()" class="navigation__trangchu">
+            <a href="./t3.html" target="t3">Trang chủ</a>
+        </h3>
+        <div class="navigation__muc">
+            <div class="option"><a href="./form/form1.html" target="t3">Mục 1</a></div>
+            <div class="option"><a href="./form/form2.html" target="t3">Mục 2</a></div>
+            <div class="option"><a href="./form/form3.html" target="t3">Mục 3</a></div>
+            <div class="option"><a href="./form/form4.html" target="t3">Mục 4</a></div>
+            <div class="option"><a href="./form/form5.html" target="t3">Mục 5</a></div>
+        </div>
+    </div>
+
+
+    <script>
+        function optionDefaul() {
+            const elements = document.querySelectorAll('.option a');
+            elements.forEach(element => {
+                element.style.color = 'black';
+            })
+        }
+        // Lấy tất cả các phần tử có lớp CSS "option a"
+        const elements = document.querySelectorAll('.option a');
+        // Lặp qua từng phần tử và thêm sự kiện click cho chúng
+        elements.forEach(element => {
+            element.addEventListener('click', () => {
+                // Thay đổi màu sắc của phần tử khi được chọn
+                element.style.color = '#106cb2';
+                // Thay đổi màu sắc của các phần tử khác về màu mặc định
+                elements.forEach(el => {
+                    if (el !== element) {
+                        el.style.color = 'black';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

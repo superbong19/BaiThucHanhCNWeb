@@ -1,0 +1,144 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:ital,wght@0,500;0,700;1,800&display=swap");
+.form3t1 {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-items: center;
+}
+.form3t1 .form3t1__search {
+  display: flex;
+  height: 26px;
+  width: 173px;
+  border: 1px solid #d5d5d5;
+  border-radius: 1rem;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
+}
+.form3t1 .form3t1__search .search-input {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBK8nEC2m8qJCNHy-1B0nN1z0Ub74VzEsXNA&usqp=CAU);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  opacity: 30%;
+  border: none;
+  /* Loại bỏ đường viền */
+  padding: 3px 7px;
+  /* Kích thước nút */
+  border-radius: 5px;
+}
+.form3t1 .form3t1__search input {
+  border: 0;
+}
+.form3t1 .form3t1__search input:focus {
+  outline: none;
+  /* Tắt đường viền mặc định */
+  border: none;
+  /* Tắt đường viền */
+}
+.form3t1 .form3t1__search input::-moz-placeholder {
+  color: #757575;
+}
+.form3t1 .form3t1__search input::placeholder {
+  color: #757575;
+}
+
+.form3t2 {
+  display: flex;
+  align-items: center;
+  justify-content: inherit;
+  margin-left: 3.5rem;
+}
+.form3t2 a {
+  text-decoration: none;
+  color: #363637;
+  font-family: "Alfa Slab One", cursive;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  padding: 9px 14px;
+  font-size: 15px;
+  border-bottom: #fff solid 7px;
+}
+.form3t2 a:hover {
+  color: #035e93;
+  border-bottom: #035e93 solid 7px;
+}
+
+.form3t3 {
+  display: flex;
+  height: 36px;
+  margin: 0;
+  justify-content: center;
+}
+.form3t3 .form3t3__content {
+  width: 100%;
+  margin-right: 4rem;
+  margin-left: 4rem;
+  height: 100%;
+  background-color: #e8e8e9;
+  border-radius: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.form3t3 .form3t3__content p {
+  font-size: 13px;
+  padding-left: 1rem;
+  font-family: "Alfa Slab One", cursive;
+  font-family: "Open Sans", sans-serif;
+  color: #363636;
+}
+
+.form3t4__container {
+  border: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 4rem;
+}
+.form3t4__container .form3t4__title {
+  font-family: "Alfa Slab One", cursive;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #e6e6e6;
+  color: #106cb2;
+}
+.form3t4__container .form3t4__title h3 {
+  padding: 1rem;
+}
+.form3t4__container .form3t4__list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: initial;
+}
+.form3t4__container .form3t4__list .option {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: initial;
+}
+.form3t4__container .form3t4__list .option a {
+  color: #222222;
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px dashed #c9c9c9;
+  padding: 1rem 0;
+  margin: 0 1rem;
+  font-family: "Alfa Slab One", cursive;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
+.form3t4__container .form3t4__list .option:hover {
+  background: #106cb2;
+  cursor: pointer;
+}
+.form3t4__container .form3t4__list .option:hover a {
+  color: #fff !important;
+}

@@ -1,0 +1,69 @@
+.t1 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-self: center;
+  overflow: hidden;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.t1 .t1__running-text {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  animation: 8s linear infinite;
+}
+@keyframes run-text {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+.navigation .navigation__trangchu {
+  padding: 1rem 0;
+  width: 100%;
+  border-bottom: 1px solid #333;
+}
+.navigation .navigation__trangchu a {
+  color: black;
+  text-decoration: none;
+}
+.navigation .navigation__muc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.navigation .navigation__muc .option {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.navigation .navigation__muc .option:hover {
+  background: #106cb2;
+  cursor: pointer;
+}
+.navigation .navigation__muc .option:hover a {
+  color: #fff !important;
+}
+.navigation .navigation__muc .option a {
+  padding: 1rem 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  text-decoration: none;
+}

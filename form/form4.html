@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../global.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="" action="" name="form4f1" style="padding: 10px;">
+        <input name="inp1" type="text">
+        <input type="button" name="" id="" value="OK" onclick="changeBackgroundColor()">
+    </form>
+    <script>
+        document.form4f1.addEventListener("submit", function (event) {
+            event.preventDefault();
+        });
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = document.form4f1.inp1.value
+        }
+    </script>
+</body>
+
+</html>
