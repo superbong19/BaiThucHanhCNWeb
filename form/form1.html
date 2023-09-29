@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../global.css">
     <title>Document</title>
+
+
 </head>
 
-<body>
-    <div style="background: rgb(187 255 204); width: 100%; height: 100%; ">
+<body onload="document.f1.username.focus()">
+    <form name="f1" style="background: rgb(187 255 204); width: 100%; height: 100%; ">
         <table style="width: 100%;">
             <tr>
                 <td></td>
@@ -17,22 +19,45 @@
             </tr>
             <tr>
                 <td>Username</td>
-                <td><input type="text" name="" id=""></td>
+                <td><input type="text" name="username" id=""></td>
             </tr>
             <tr>
                 <td>passworld</td>
-                <td><input type="text" name="" id=""></td>
+                <td><input type="password" name="pass" id=""></td>
             </tr>
             <tr>
-                <td></td>
-                <td style="padding-left: 40px;">
-                    <input type="button" value="OK">
-                    <input type="button" value="Reset">
+
+                <td>
+
+                </td>
+                <td>
+                    <p class="er" style="display:none; color: red;">Vui lòng nhập đủ tên tài khoản và mật khẩu</p>
+                    <input style="margin-left: 40px;" type="button" value="OK" onclick="handleOk()">
+                    <input type="button" value="Reset" onclick="handleReset()">
                 </td>
             </tr>
         </table>
-    </div>
+    </form>
 
+
+    <script>
+        function handleReset() {
+            document.f1.username.value = '';
+            document.f1.pass.value = '';
+            document.querySelector(".er").style.display = "none";
+        }
+        function handleOk() {
+            if ((document.f1.username.value == '') || (document.f1.pass.value == ''))
+                document.querySelector(".er").style.display = "block";
+            else {
+                alert("Đăng nhập thành công!!");
+                document.f1.username.value = '';
+                document.f1.pass.value = '';
+                document.querySelector(".er").style.display = "none";
+            }
+        }
+
+    </script>
 </body>
 
 </html>

@@ -9,16 +9,22 @@
 </head>
 
 <body>
-    <form method="" action="" name="form4f1" style="padding: 10px;">
-        <input name="inp1" type="text" onblur="upperCase()">
+    <form method="" action="" name="f1" style="padding: 10px;">
+        <select name="sl1" id="">
+            <option name="op1" value="0">index 0</option>
+            <option name="op2" value="1">index 1</option>
+            <option name="op3" value="2">index 2</option>
+            <option name="op4" value="3">index 3</option>
+        </select>
+        <input name="inp1" type="number">
+        <input onclick="handleOK()" name="b1" type="button" value="OK">
     </form>
     <script>
-        document.form4f1.addEventListener("submit", function (event) {
-            event.preventDefault();
-        });
-        function upperCase() {
-            document.form4f1.inp1.value = (document.form4f1.inp1.value).toUpperCase()
+
+        function handleOK() {
+            document.f1.inp1.value = document.f1.sl1.value
         }
+
     </script>
 </body>
 

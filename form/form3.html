@@ -8,14 +8,36 @@
     <title>Document</title>
 </head>
 
-<frameset border="0" rows="76, 62.5, 55.5,*">
-    <frame name="form3t1" src="./form3/form3t1.html" />
-    <frame name="form3t2" src="./form3/form3t2.html" />
-    <frame name="form3t3" src="./form3/form3t3.html" />
-    <frameset cols="450,*">
-        <frame name="form3t4" src="./form3/form3t4.html" />
-        <frame name="form3t5" src="./form3/form3t5.html" />
-    </frameset>
-</frameset>
+<body onload="document.f1.inp1.focus()">
+    <form method="" action="" name="f1" style="padding: 10px;">
+        <input name="inp1" type="text" onblur="handleBlur()">
+        <input name="inp2" type="text">
+    </form>
+
+    <script>
+        function handleBlur() {
+            function toggleCase(inputString) {
+                var result = '';
+                for (var i = 0; i < inputString.length; i++) {
+                    var char = inputString[i];
+                    // Kiểm tra xem ký tự có nằm trong khoảng chữ hoa không
+                    if (char >= 'A' && char <= 'Z') {
+                        // Chuyển chữ hoa thành chữ thường bằng cách cộng 32 đơn vị ASCII
+                        result += String.fromCharCode(char.charCodeAt(0) + 32);
+                    } else if (char >= 'a' && char <= 'z') {
+                        // Chuyển chữ thường thành chữ hoa bằng cách trừ 32 đơn vị ASCII
+                        result += String.fromCharCode(char.charCodeAt(0) - 32);
+                    } else {
+                        // Không là ký tự chữ cái thì giữ nguyên
+                        result += char;
+                    }
+                }
+                return result;
+            }
+            document.f1.inp2.value = toggleCase(document.f1.inp1.value)
+        }
+
+    </script>
+</body>
 
 </html>

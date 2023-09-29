@@ -7,44 +7,28 @@
     <link rel="stylesheet" href="../global.css">
     <title>Document</title>
 </head>
+<script>
+    function AddPrice(amount) {
+        with (this) { price = amount }
+    }
+    function Book(title, author, content) {
+        this.title = title;
+        this.author = author;
+        this.content = content;
+        this.price = 0;
+        this.AddPrice = AddPrice;
+    }
+</script>
 
 <body>
-    <div style="padding-left: 2rem; background: #a9dddd; height: 100%; ">
-        <h1 style="color: #fe0100; text-align: center;">VÍ DỤ VỀ TẠO FORM</h1>
-        <table style="     text-align: initial;">
-            <tr>
-                <td style=" width: fit-content;">Text box: </td>
-                <td><input type="text" name="" id=""></td>
-            </tr>
-            <tr>
-                <td>Text Area: </td>
-                <td>
-                    <textarea rows="1" style=" width: 143px; height: 19.5px;resize: none;">
-
-                    </textarea>
-                </td>
-            </tr>
-            <tr>
-                <td>File box: </td>
-                <td>
-                    <input type="file" id="myInput">
-                </td>
-            </tr>
-
-        </table>
-        <div style="padding-left: 1rem;">
-            <input type="radio">
-            <label>Radio button</label>
-            <br>
-            <input type="checkbox">
-            <label>Check box</label>
-            <br>
-            <button style="height: 21px; width: 87px;">Submit</button>
-            <button style="height: 21px; width: 87px;">Reset</button>
-        </div>
-
-
-    </div>
+    <script>
+        var MyBook = new Book("Java", "Sun", "OOP");
+        MyBook.AddPrice(500);
+        document.write("Book title is : " + MyBook.title + "<br>");
+        document.write("Book author is : " + MyBook.author + "<br>");
+        document.write("Book content is : " + MyBook.content + "<br>");
+        document.write("Book price is : " + MyBook.title + "<br>");
+    </script>
 </body>
 
 </html>

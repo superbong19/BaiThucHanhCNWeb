@@ -9,17 +9,23 @@
 </head>
 
 <body>
-    <form method="" action="" name="form4f1" style="padding: 10px;">
-        <input name="inp1" type="text">
-        <input type="button" name="" id="" value="OK" onclick="changeBackgroundColor()">
+    <form method="" action="" name="f1" style="padding: 10px;">
+        <select name="sl1" id="">
+            <option name="op1" value="0">index 0</option>
+            <option name="op2" value="1">index 1</option>
+            <option name="op3" value="2">index 2</option>
+            <option name="op4" value="3">index 3</option>
+        </select>
+        <input name="inp1" type="number">
+        <input onclick="handleOK()" name="b1" type="button" value="OK">
     </form>
     <script>
-        document.form4f1.addEventListener("submit", function (event) {
-            event.preventDefault();
-        });
-        function changeBackgroundColor() {
-            document.body.style.backgroundColor = document.form4f1.inp1.value
+
+        function handleOK() {
+            document.f1.sl1.selectedIndex = document.f1.inp1.value
+
         }
+
     </script>
 </body>
 
